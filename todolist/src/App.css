@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #ffdf6c;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.TodoWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: slide-up 1.2s ease-out;
+}
+
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.todo-input::placeholder {
+  color: #ffffffa0;
+}
+
+.todo-btn {
+  background: linear-gradient(45deg, #ff006e, #ffdf6c);
+  color: #1a1a40;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 1rem;
+}
+
+.todo-btn:hover {
+  background: linear-gradient(45deg, #ffdf6c, #ff006e);
+  box-shadow: 0 6px 20px rgba(255, 0, 110, 0.5);
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff4d4d, #6a11cb);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.Todo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.fa-trash {
+  color: #fff;
+  margin-left: 0.75rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.fa-trash:hover {
+  color: #ff004c;
+  transform: rotate(15deg);
+}
+
+.incompleted {
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.incompleted:hover {
+  color: #ffdf6c;
+}
+
+.completed {
+  color: #ffbbbb;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: #ffdf6c;
+  transform: rotate(-15deg);
+}
+
+.delete-icon:hover {
+  color: #ff004c;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
